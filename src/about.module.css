@@ -1,0 +1,75 @@
+/* About.module.css */
+.about-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent to show background */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px); /* Blurs the background behind the container */
+}
+
+.about-heading {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.accordion-button {
+  background-color: #3498db;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.accordion-button:hover {
+  background-color: #2980b9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.accordion-item {
+  margin-bottom: 10px;
+  border: none;
+}
+
+.accordion-body {
+  background-color: #ffffff;
+  border: 1px solid #dfe6e9;
+  border-top: none;
+  padding: 20px;
+  color: #2c3e50;
+}
+
+strong {
+  color: black;
+}
+
+code {
+  color: #8e44ad;
+  background-color: #f1c40f;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+@media (max-width: 576px) {
+  .about-container {
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .about-heading {
+    font-size: 1.5rem;
+  }
+
+  .accordion-button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .accordion-body {
+    padding: 15px;
+  }
+}

@@ -46,8 +46,10 @@ const NoteState=(props)=>{
             
 
             const note=json;
-            setNotes(notes.concat(note));
+            setNotes(notes.concat(note))
       }
+
+
 
       //Delete a note
       const deleteNote=async (id)=>{

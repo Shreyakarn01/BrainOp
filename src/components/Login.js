@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import {useNavigate} from 'react-router-dom';
+import styles from '../login.module.css'
 
 
 const Login = (props) => {
@@ -33,20 +34,20 @@ const Login = (props) => {
           }
     }
   return (
-    <div className="container mt-3">
-      <h2>Login to continue to iNotebook</h2>
+    <div className={`container mt-3 ${styles['login-container']}`}>
+      <h2 className={styles['login-heading']}>Login to continue to BrainOp</h2>
         <form className="my-4" onSubmit={handleSubmit}>
   <div className="mb-3">
-    <label htmlFor="email" className="form-label" required>Email address</label>
-    <input type="email" className="form-control" id="email" name="email" value={credentials.email} onChange={onChange} aria-describedby="emailHelp" required/>
-    <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+    <label htmlFor="email" className={`form-label ${styles['login-form-label']}`} required>Email address</label>
+    <input type="email" className={`form-control ${styles['login-form-control']}`} id="email" name="email" value={credentials.email} onChange={onChange} aria-describedby="emailHelp" required/>
+    <div id="emailHelp" className={`form-text ${styles['login-form-text']}`}>We'll never share your email with anyone else.</div>
   </div>
   <div className="mb-3">
-    <label htmlFor="password" className="form-label">Password</label>
-    <input type="password" className="form-control" id="password" name="password" value={credentials.password} onChange={onChange} minLength={5} required/>
+    <label htmlFor="password" className={`form-label ${styles['login-form-label']}`}>Password</label>
+    <input type="password" className={`form-control ${styles['login-form-control']}`} id="password" name="password" value={credentials.password} onChange={onChange} minLength={5} required/>
   </div>
   
-  <button type="submit" className="btn btn-primary">Submit</button>
+  <button type="submit" className={`btn btn-primary ${styles['login-btn-primary']}`}>Login</button>
 </form>
     </div>
   );
